@@ -1,16 +1,13 @@
-import React, { Component } from "react";
+import React from "react";
 import styled, { css } from "styled-components";
 
-class Button extends Component {
-  render() {
-    const { value, width, marginTop, onClick, type = "button" } = this.props;
-    return (
-      <StyledButton type={type} width={width} marginTop={marginTop} onClick={onClick}>
-        {value}
-      </StyledButton>
-    );
-  }
-}
+const Button = ({ value, width, marginTop, onClick, type = "button" }) => {
+  return (
+    <StyledButton type={type} width={width} marginTop={marginTop} onClick={onClick}>
+      {value}
+    </StyledButton>
+  );
+};
 
 const StyledButton = styled.button`
   ${({ theme }) => theme.flexSet("center", "center")}
