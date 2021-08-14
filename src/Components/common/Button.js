@@ -1,12 +1,16 @@
 import React from "react";
 import styled, { css } from "styled-components";
 
-const Button = ({ value, width, marginTop, onClick, type = "button" }) => {
+const Button = ({ value, width, marginTop, onClick, type }) => {
   return (
     <StyledButton type={type} width={width} marginTop={marginTop} onClick={onClick}>
       {value}
     </StyledButton>
   );
+};
+
+Button.defaultProps = {
+  type: "button",
 };
 
 const StyledButton = styled.button`

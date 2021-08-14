@@ -1,7 +1,7 @@
 import React from "react";
 import ModalPortal from "Components/common/Modal/ModalPortal";
 
-const Modal = ({ isOpen, toggleModal, modalType = null, children }) => {
+const Modal = ({ isOpen, toggleModal, modalType, children }) => {
   return (
     <>
       {isOpen && (
@@ -11,6 +11,10 @@ const Modal = ({ isOpen, toggleModal, modalType = null, children }) => {
       )}
     </>
   );
+};
+
+Modal.defaultProps = {
+  modalType: null,
 };
 
 export default Modal;
