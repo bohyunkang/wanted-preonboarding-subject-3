@@ -26,13 +26,14 @@ const LogoutButton = ({ setLoggedInUser }) => {
   useEffect(() => {
     const pageClickEvent = (e) => {
       !dropdownRef.current?.contains(e.target) && setActiveMenu(!activeMenu);
-      if (activeMenu) {
-        window.addEventListener("click", pageClickEvent);
-      }
+    };
 
-      return () => {
-        window.removeEventListener("click", pageClickEvent);
-      };
+    if (activeMenu) {
+      window.addEventListener("click", pageClickEvent);
+    }
+
+    return () => {
+      window.removeEventListener("click", pageClickEvent);
     };
   }, [activeMenu]);
 
