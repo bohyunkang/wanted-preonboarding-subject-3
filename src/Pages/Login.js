@@ -1,16 +1,12 @@
 import React, { useState } from "react";
 import { Link, useHistory } from "react-router-dom";
 import styled from "styled-components";
-import Input from "Components/common/Input";
-import Button from "Components/common/Button";
-import MessageBox from "Components/common/MessageBox";
+import { Input, Button, MessageBox } from "Components/common";
 import { USER_STORAGE, LOGGEDIN_USER } from "Utils/constants";
 import { loadLocalStorage, saveLocalStorage } from "Utils/Storage";
 import { compareSync } from "Utils/bcrypt";
 import { isEmail } from "Utils/validator";
-import { ReactComponent as Mail } from "Assets/svg/mail.svg";
-import { ReactComponent as ClosedEye } from "Assets/svg/eye_closed.svg";
-import { ReactComponent as OpenedEye } from "Assets/svg/eye_opened.svg";
+import { Mail, ClosedEye, OpenedEye } from "Assets/svg";
 
 const Login = () => {
   const history = useHistory();

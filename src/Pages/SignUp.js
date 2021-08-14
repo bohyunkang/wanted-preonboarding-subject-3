@@ -1,12 +1,7 @@
 import React, { useState } from "react";
 import styled, { css } from "styled-components";
-import Input from "Components/common/Input";
-import Button from "Components/common/Button";
-import Radio from "Components/common/Radio";
-import Modal from "Components/common/Modal/Modal";
-import AddressModal from "Components/common/Modal/AddressModal";
-import SignupModal from "Components/common/Modal/SignupModal";
-import CreditModal from "Components/common/Modal/CreditModal";
+import { Input, Button, Radio } from "Components/common";
+import { Modal, AddressModal, CreditModal, SignupModal } from "Components/common/Modal";
 import {
   isEmail,
   isPassword,
@@ -20,14 +15,7 @@ import {
 import { hashSync } from "Utils/bcrypt";
 import { AUTH_LEVEL, USER_STORAGE } from "Utils/constants";
 import { loadLocalStorage, saveLocalStorage, autoIncrementUserId } from "Utils/Storage";
-import { ReactComponent as Mail } from "Assets/svg/mail.svg";
-import { ReactComponent as ClosedEye } from "Assets/svg/eye_closed.svg";
-import { ReactComponent as OpenedEye } from "Assets/svg/eye_opened.svg";
-import { ReactComponent as Person } from "Assets/svg/person.svg";
-import { ReactComponent as Map } from "Assets/svg/map.svg";
-import { ReactComponent as Card } from "Assets/svg/card.svg";
-import { ReactComponent as Calendar } from "Assets/svg/calendar.svg";
-import checkIcon from "Assets/svg/check.svg";
+import { Calendar, Card, ClosedEye, OpenedEye, Mail, Map, Person, checkIcon } from "Assets/svg";
 
 const SignUp = () => {
   const [modalType, setModalType] = useState("");

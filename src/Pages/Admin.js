@@ -4,8 +4,8 @@ import SearchBar from "Components/Admin/SearchBar/SearchBar";
 import AuthFilter from "Components/Admin/AuthFilter/AuthFilter";
 import UserDataTable from "Components/Admin/UserDataTable/UserDataTable";
 import Pagination from "Components/Admin/Pagination/Pagination";
-import Modal from "Components/common/Modal/Modal";
 import CreateAccount from "Components/Admin/CreateAccount/CreateAccount";
+import Modal from "Components/common/Modal/Modal";
 import { loadLocalStorage, saveLocalStorage } from "Utils/Storage";
 import { ADMIN, USER_STORAGE } from "Utils/constants";
 
